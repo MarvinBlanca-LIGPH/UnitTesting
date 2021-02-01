@@ -10,7 +10,7 @@ object Homework {
      * fib(n) = fib(n-2) + fib(n-1)
      */
     fun fib(n: Int): Long {
-        if(n == 0 || n == 1) {
+        if (n == 0 || n == 1) {
             return n.toLong()
         }
         var a = 0L
@@ -22,5 +22,10 @@ object Homework {
             b = c
         }
         return c
+    }
+
+    fun login(username: String, password: String): String {
+        if (username.isNotEmpty() && password.length >= 4) return "Success"
+        return "Failed"
     }
 }
